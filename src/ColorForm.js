@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 function ColorForm(props){
     let [input, setInput] = useState('')
 
@@ -19,4 +20,5 @@ function ColorForm(props){
     )
 }
 
-// import React, { useState } from 'react'
+
+export default ColorForm

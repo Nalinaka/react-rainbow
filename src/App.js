@@ -1,9 +1,9 @@
-// import logo from './logo.svg';
+import React, { useState } from 'react'
+import ColorBlock from './ColorBlock';
+import ColorForm from './ColorForm'
+import logo from './logo.svg';
 import './App.css';
 
-import React, { useState } from 'react'
-// Make sure to import the component we just built:
-import ColorBlock from './ColorBlock'
 
 function App(){
     let [colors, setColors] = useState([
@@ -17,6 +17,10 @@ function App(){
         setColors([...colors, newColor])
     }
 
+    let colorMap = colors.map((color, i) => {
+      return <ColorBlock key={i} color={color} />
+    })
+
     return (
         <div className="App">
             {colorMap}
@@ -26,12 +30,6 @@ function App(){
 
 
 export default App;
-
-    // let colorMap = colors.map((color, i) => {
-    //     return (
-    //         <ColorBlock color={color} />
-    //     )
-    // })
 
 
       {/* {/* <header className="App-header">
